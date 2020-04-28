@@ -9,28 +9,32 @@ public class Iffloops {
         String ans;
         String input="";
         for (int i = 0; i < 5; i++) {
-            System.out.println("Enter a word");
-            word=scanner.nextLine();
-            ONE+=word;
+            System.out.print("Enter a word ");
+            word = scanner.nextLine();
+            ONE = ONE + " " + word;
         }
-        System.out.println(ONE);
+        System.out.println(ONE+ " ");
 
         System.out.println();
         boolean RedEyes= false;
-        while(!(input.equals("n"))) {
+
+        while(!(RedEyes)) {
             System.out.println("Are your eyes red? ");
             ans = scanner.nextLine();
 
             if (ans.equalsIgnoreCase("yes") || ans.equalsIgnoreCase("Y")) {
-                RedEyes=true;
-                System.out.println("Get some sleep! Red eyes: "+ RedEyes);
+              //  RedEyes=true;
+                System.out.println("Get some sleep! ");
             } else {
-                RedEyes=false;
-                System.out.println("You look great! Red eyes: "+ RedEyes);
+               // RedEyes=false;
+                System.out.println("You look great! ");
 
             }
-            System.out.println("Do you want to try again? ");
+            System.out.println("Do you want to try again?(yes/no) ");
             input=scanner.nextLine();
+            if(input.equalsIgnoreCase("no")){
+                RedEyes = true;
+            }
         }
 
 
